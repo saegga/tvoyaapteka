@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<script
+  src="http://code.jquery.com/jquery-1.12.4.js"
+  integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+  crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+	<script src="js/bootstrap.js"></script>
+	
+
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+  <link rel="stylesheet" href="bxslider/css/style.css">
+	<title>Document</title>
+</head>
+<body>
+
+
+<!-- <div class="container">
+	
+	<div class="row">
+		<div class="wrap">
+		<div class="col-lg-8 item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, tempore.</div>
+		<div class="col-lg-4 item">Lorem ipsum dolor sit amet.</div>
+		</div>
+		<div class="wrap">
+		<div class="col-lg-8 item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, tempore.2</div>
+		<div class="col-lg-4 item">Lorem ipsum dolor sit amet.2</div>
+		</div>
+	</div>
+		
+		<div class="wrap"><span>Текст</span></div>
+</div> -->
+<div class="container">
+	<div class="row">
+		<div class="col-lg-8">
+			<div class="w">
+				<div class="left_slider">left slider</div>
+				<div class="right_slider"> right slider</div>
+			</div>
+			
+		</div>
+		<div class="col-lg-4">4 col</div>
+	</div>
+</div>
+</body>
+</html>
+<script src="bxslider/js/jquery.bxslider.js"></script>
+<style>
+	/*.item{
+		height: 150px;
+		border: 2px solid;
+	}
+	.wrap{
+		display: flex;
+		flex-wrap: wrap;
+		margin-right: 15px;
+		margin-left: 15px;
+	}
+	.container{
+		border: 1px solid green;
+	}*/
+	.w{
+		display: flex;
+	}
+	.left_slider{
+		display: flex;
+		border: 2px solid;
+	}
+	.right_slider{
+		display: flex;
+		border: 2px solid;
+	}
+	.wrap{
+		width: 200px;
+		height: 200px;
+		border: 1px solid;
+		text-align: center;
+		position: relative;
+	}
+	.wrap span{
+		display: inline-block;
+		
+	}
+	.wrap span:before{
+		content: '';
+		display: block;
+		position: absolute;
+		height: 2px;
+		width: 50%;
+		background: green;
+	}
+
+</style>
+<script>
+	// $('.row').bxSlider({
+	// 	controls: false,
+	// 	wrapperClass: "row"
+	// });
+</script>

@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+	<script
+  src="http://code.jquery.com/jquery-1.12.4.js"
+  integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+  crossorigin="anonymous"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="scrollbar/jquery.custom-scrollbar.js"></script>
+
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="catalog.css">
+	<link rel="stylesheet" href="bxslider/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" href="scrollbar/jquery.custom-scrollbar.css">
+
+	<script src="js/jquery.touchSwipe.min.js"></script>
+
+	
+	<script src="main.js"></script>
+	<title>Твоя аптека</title>
+</head>
+<body>
+<div class="sidebar_menu-catalog close">
+		<ul>
+			<li><a href=""><span>Лекарственные препараты</span></a></li>
+			<li><a href=""><span>Бад и лечебная косметика</span></a></li>
+			<li><a href=""><span>Медицинские приборы</span></a></li>
+			<li><a href=""><span>Медицинские изделия</span></a></li>
+			<li><a href=""><span>Гигиена и косметика</span></a> </li>
+			<li><a href=""><span>Для мамы и малыша</span></a></li>
+			<li><a href=""><span>Диета и спорт</span></a></li>
+			<li><a href=""><span>Прочие товары</span></a></li>
+		</ul>
+	</div>
+	<div class="sidebar_menu-nav sidepanel">
+		<ul class="side_mob_menu">
+			<li><a href=""><span>О компании</span></a></li>
+			<li><a href=""><span>Как оформить заказ</span></a></li>
+			<li><a href=""><span>Адреса аптек</span></a></li>
+			<li><a href=""><span>Отзывы</span></a></li>
+			<li><a href=""><span>Контакты</span></a></li>
+		</ul>
+</div>
+<div id="slideout-wrapper">	
+	<header>
+		<div class="header_top-menu">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-3 col-3 d-md-none d-sm-block"><div class="toggle_menu"><i class="fas fa-bars"></i></div></div>
+						<div class="col-lg-10 col-md-9 d-none d-md-block nav-container">
+							<ul>
+								<li><a href="#">О компании</a></li>
+								<li><a href="#">Как оформить заказ</a></li>
+								<li><a href="#">Адреса аптек</a></li>
+								<li><a href="#">Отзывы</a></li>
+								<li><a href="#">Контакты</a></li> 
+							</ul>
+						</div>
+						<div class="col-lg-2 col-md-3 col-sm-9 col-9 no-pl">
+						<div class="header_reg-auth">
+							<a href="#">Вход</a>
+							<a href="#">Регистрация</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header_mid">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 logo">
+						<img src="img/logo.png" alt="">
+					</div>
+					<div class="col-lg-4 col-md-5 no-pd wrap_search">
+						<div class="row">
+							<div class="col-lg-6 col-md-6 col-6  town_search"><a href="" class="city"><i class="fas fa-map-marker-alt"></i>Благовещенск</a></div>
+							<div class="col-lg-6 col-md-6 col-6  select_apteke"><a href="" class="store_set">Выберете аптеку</a></div>
+						</div>
+						<div class="row top_search">
+							<div class="col-lg-12 col-md-12 col-sm-12 top_search-col no-pr">
+								<div class="">
+									<form>
+										<div class="input-group mb-3">
+										<input type="search" name="" placeholder="Найдите нужный товар по названию" class="form-control">
+										<div class="input-group-append">
+										   <button class="" type="search" id="button-addon2"></button>
+										 </div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>				
+					</div>
+					<div class="col-lg-2 col-md-3 d-none d-md-block header_info">
+						<p class="apteke">Аптечная справочная служба</p>
+						<p class="telephone">8-800-100-000-3</p>	
+						<p class="free_call">бесплатный звонок по России</p>	
+					</div>
+					<div class="col-lg-3 col-md-1 d-none d-md-block">
+						<div class="row">
+							<div class="col-lg-8 d-lg-block d-md-none top_bascket">
+								<div class="info_wrap">
+									<a href="#" class="execute_order">Оформить заказ</a>
+									<a href="#" class="descr_bascket">
+										<span class="count_items">18 товаров</span>
+										<span class="summ"> на сумму 122 235 руб.</span>
+									</a>
+									<span class="bascket_empty empty_info">Корзина Пуста
+										<a href="" class="how_order">Как оформить заказ?</a>
+									</span>
+
+								</div>
+							</div>
+							<div class="col-lg-4 d-none d-md-block">
+								<div class="bas_amount">12</div>
+								<a href="" class="basket_icon"><img src="img/korzina.png"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+        <div class="catalog_menu">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 d-block d-md-none mobile_navigation_wrap">
+						<ul class="mobile_navigation">
+							<li class="mob_nav_item"><a href=""><i class="fas fa-map-marker"></i>Выбрать город</a></li>
+							<li class="mob_nav_item"><a href=""><i class="fas fa-plus"></i>Выбрать аптеку</a></li>
+							<li class="mob_nav_item"><a href=""><i class="fas fa-bars"></i>Каталог товаров</a></li>
+							<li class="mob_nav_item"><a href=""><i class="fas fa-cart-plus"></i>Корзина</a></li>
+							<li class="mob_nav_item phone"><a href=""><i class="fas fa-telephone"></i>Позвонить бесплатно в </br> <strong>аптечную справочную службу</strong></a></li>
+						</ul>
+					</div>
+					<div class="col-lg-12 col-md-12 d-none d-md-block">
+						<nav class="nav_container-catalog">
+							<ul class="nav_list">
+								<li class="nav_item-lvl-1">
+									<a href=""><span>Лекарственные препараты</span></a>
+									<div class="nav_list-2-container">
+										<ul>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы и витамины</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы для мужчин</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы при заболеваниях Мочеполовой системы</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>Косметические средства при Гинекологических заболеваниях</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы для Детей</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы для Опорно-двигательного аппарата</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы при заболеваниях Нервной системы</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>Косметические средства при Кожных заболеваниях</span></a></li>
+
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы для Женщин</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы для Сердечно-сосудистой системы</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы при нарушениях Обмена веществ и Эндокринных заболеваниях</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>Косметические средства при Простудных заболеваниях</span></a></li>
+										</ul>
+									</div>
+								</li>
+								<li class="nav_item-lvl-1">
+									<a href=""><span>Бад и лечебная косметика</span></a>
+									<div class="nav_list-2-container">
+										<ul>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы и витамины</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы для мужчин</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы при заболеваниях Мочеполовой системы</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>Косметические средства при Гинекологических заболеваниях</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы для Детей</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы для Опорно-двигательного аппарата</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы при заболеваниях Нервной системы</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>Косметические средства при Кожных заболеваниях</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы для Женщин</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы для Сердечно-сосудистой системы</span></a></li>
+										</ul>
+									</div>
+								</li>
+								<li class="nav_item-lvl-1">
+									<a href=""><span>Медицинские приборы</span></a>
+									<div class="nav_list-2-container">
+										<ul>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы и витамины</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы для мужчин</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы при заболеваниях Мочеполовой системы</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>Косметические средства при Гинекологических заболеваниях</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы для Детей</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы для Опорно-двигательного аппарата</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы при заболеваниях Нервной системы</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>Косметические средства при Кожных заболеваниях</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы для Сердечно-сосудистой системы</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы для Женщин</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы для Сердечно-сосудистой системы</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы для Сердечно-сосудистой системы</span></a></li>
+										</ul>
+									</div>
+								</li>
+								<li class="nav_item-lvl-1">
+									<a href=""><span>Медицинские изделия</span></a>
+									<div class="nav_list-2-container">
+										<ul>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы и витамины</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы для мужчин</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы при заболеваниях Мочеполовой системы</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>Косметические средства при Гинекологических заболеваниях</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы для Детей</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы для Опорно-двигательного аппарата</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы при заболеваниях Нервной системы</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>Косметические средства при Кожных заболеваниях</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы для Женщин</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы для Сердечно-сосудистой системы</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы для Сердечно-сосудистой системы</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы для Сердечно-сосудистой системы</span></a></li>
+										</ul>
+									</div>
+								</li>
+								<li class="nav_item-lvl-1">
+									<a href=""><span>Гигиена и косметика</span></a>
+									<div class="nav_list-2-container">
+										<ul>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы и витамины</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы для мужчин</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы при заболеваниях Мочеполовой системы</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>Косметические средства при Гинекологических заболеваниях</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы для Детей</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы для Опорно-двигательного аппарата</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы при заболеваниях Нервной системы</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>Косметические средства при Кожных заболеваниях</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы для Женщин</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы для Сердечно-сосудистой системы</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы для Сердечно-сосудистой системы</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы для Сердечно-сосудистой системы</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы для Сердечно-сосудистой системы</span></a></li>
+										</ul>
+									</div>
+								</li>
+								<li class="nav_item-lvl-1">
+									<a href=""><span>Для мамы и малыша</span></a>
+									<div class="nav_list-2-container">
+										<ul>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы и витамины</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы для мужчин</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы при заболеваниях Мочеполовой системы</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>Косметические средства при Гинекологических заболеваниях</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы для Детей</span></a></li>
+										</ul>
+									</div>
+								</li>
+								<li class="nav_item-lvl-1">
+									<a href=""><span>Диета, спорт, питание</span></a>
+									<div class="nav_list-2-container">
+										<ul>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы и витамины</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы для мужчин</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы при заболеваниях Мочеполовой системы</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>Косметические средства при Гинекологических заболеваниях</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы для Детей</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы для Опорно-двигательного аппарата</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы при заболеваниях Нервной системы</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>Косметические средства при Кожных заболеваниях</span></a></li>
+										</ul>
+									</div>
+								</li>
+								<li class="nav_item-lvl-1">
+									<a href=""><span>Прочие товары</span></a>
+									<div class="nav_list-2-container">
+										<ul>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы и витамины</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы для мужчин</span></a></li>
+											<li class="nav_item-lvl-2"><a href=""><span>БАДы при заболеваниях Мочеполовой системы</span></a></li>
+										</ul>
+									</div>
+									</li>
+								<li class="nav_item-lvl-1 nav-action">
+									<a href=""><span>Акции</span></a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+    </header>
+<div class="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb">
+                    <a href="">Главная</a>
+                    <a href="">Каталог</a>
+                    <span>Медицинские приборы</span>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="left_menu">
+                            <p class="title_menu">Категории</p>
+                            <ul>
+                                <li class="parent">
+                                    <a href=""><span>Тонометры</span></a>
+                                </li>
+                                <li><a href=""><span>Глюкометры</span></a></li>
+                                <li class="parent active">
+                                    <a href="">
+                                        <span>Ингаляторы</span>
+                                    </a>
+                                    <ul>
+                                        <li><a href=""><span>Паровые</span></a></li>
+                                        <li><a href=""><span>Ультрозвуковые</span></a></li>
+                                        <li><a href=""><span>Компрессорные</span></a></li>
+                                        <li><a href=""><span>Электронно-сетчаты</span></a></li>
+                                    </ul>
+                                </li>
+                                <li><a href=""><span>Термометры</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <h1>Медицинские приборы</h1>
+                        <div class="catalog_list">
+                            <div class="filter_panel filter">
+                                <div class="all_day">
+                                    <form action="">
+                                        <input type="checkbox" id="all_day-check" style="display: none">
+                                        <label for="all_day-check" class="all_day-check">
+                                        <span>
+                                                Показывать товары<br>
+                                                только в круглосуточных аптеках
+                                        </span>
+                                        </label>
+                                    </form>
+                                </div>
+                                <div class="choice_apteke">
+									<p class="title">		
+										<span>Выберете аптеку</span>
+									</p>
+									<div class="drop_choice">
+										<a href=""><span>Аптека Перекресток Ш. Новотроицкое, 3</span></a>
+										<a href=""><span>Аптека Элегант Ул. 50 лет Октября, 28</span></a>
+										<a href=""><span>Аптека КПП Здоровье Ул. 50 лет Октября, 202</span></a>
+										<a href=""><span>Семейная Ул. Красноармейская, 132</span></a>
+									</div>
+								</div>
+                                <div class="sort_box">
+									<p class="title">Сортировать</p>
+									<div class="dropsort">
+										<a href="">По названию</a>
+										<a href="">По возрастанию цены</a>
+										<a href="">По убыванию цены</a>
+										<a href="">По скидкам</a>
+									</div>
+								</div>
+							</div>
+							<div class="catalog_section-item">
+								<div class="product_img">
+									<img src="img/gluk.jpg">
+								</div>
+								<div class="product_info_block">
+									<div class="top_text">
+										<p class="product_name">Глюкометр</p>
+										<p class="manufacter">Производитель "Нижфарм"</p>
+									</div>
+									<div class="mid_text">
+										<div class="quantity_block">
+											<p class="quantity_title yes">Есть в наличии на выбранной аптеке</p>
+											<form class="quntity_in_apt">
+												<select>
+													<option>Товар есть в 15 аптеках, посмотрите все  </option>
+													<option>Аптека 1</option>
+													<option>Аптека 2</option>
+												</select>
+											</form>
+										</div>
+										<div class="action_block">
+											<p class="price">116 700,00 руб.</p>
+											<a href="" class="add_basket active">В корзину</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="catalog_section-item">
+								<div class="product_img">
+									<div class="marker marker_red">
+										<i></i>
+										<span>Рецептурный препарат</span>
+									</div>
+									<img src="img/2_item.jpg">
+								</div>
+								<div class="product_info_block">
+									<div class="top_text">
+										<p class="product_name">Глюкометр</p>
+										<p class="manufacter">Производитель "Нижфарм"</p>
+									</div>
+									<div class="mid_text">
+										<div class="quantity_block">
+											<p class="quantity_title no">Нет в наличии на выбранной аптеке</p>
+											<form class="quntity_in_apt">
+												<select>
+													<option>Товар есть в 15 аптеках, посмотрите все  </option>
+													<option>Аптека 1</option>
+													<option>Аптека 2</option>
+												</select>
+											</form>
+										</div>
+										<div class="action_block">
+											<p class="price">7550,00 руб.</p>
+											<a href="" class="add_basket no_active">В корзину</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="catalog_section-item">
+								<div class="product_img">
+									<div class="marker marker_red">
+										<i></i>
+										<span>Рецептурный препарат</span>
+									</div>
+									<img src="img/no_photo.png">
+								</div>
+								<div class="product_info_block">
+									<div class="top_text">
+										<p class="product_name">Измеритель мощьности и частоты (УВЧ ткрапии) ИМЧ-01</p>
+										<p class="manufacter">Производитель "Нижфарм"</p>
+									</div>
+									<div class="mid_text">
+										<div class="quantity_block">
+											<div class="no_quantity">
+												<p>
+													В нашей сети аптек товар временно отсутствует. О возможности заказа можно уточнить 
+													<br>по телефону:
+												</p>
+												<p class="telephone">8(800)100-000-3.</p>
+											</div>
+										</div>
+										<div class="action_block">
+											<p class="price">7550,00 руб.</p>
+											<a href="" class="add_basket active">В корзину</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="pagination_container">
+								<p class="count_products">В этой категории 580 товаров</p>
+								<div class="pagination">
+									<a href="" class="prev"><<</a>
+									<a href="">1</a>
+									<a href="">2</a>
+									<a href="" class="current">3</a>
+									<a href="">...</a>
+									<a href="">20</a>
+									<a href="">21</a>
+									<a href="">22</a>
+									<a href="" class="next">>></a>
+								</div>
+								<div class="show_count">
+									<p class="title">Показывать по</p>
+									<div class="dropsort">
+										<a href="">Показывать по 50</a>
+										<a href="">Показывать по 100</a>
+										<a href="">Показывать по 150</a>
+										<a href="">Показывать по 200</a>
+									</div>
+								</div>
+							</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<footer>
+	<div class="top_line">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-3 d-none d-md-block">
+					<div class="foot_menu-title">Компания</div>
+					<ul class="foot_menu no-style">
+						<li><a href="" class="item">О компании</a></li>
+						<li><a href="" class="item">Адреса аптек</a></li>
+						<li><a href="" class="item">Новости</a></li>
+						<li><a href="" class="item">Отзывы</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-3 col-md-3 d-none d-md-block">
+					<div class="foot_menu-title">Покупателям</div>
+					<ul class="foot_menu no-style">
+						<li><a href="" class="item">Как оформить заказ</a></li>
+						<li><a href="" class="item">Сроки и условия получения заказа</a></li>
+						<li><a href="" class="item">Личный кабинет</a></li>
+						<li><a href="" class="item">Акции</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-3 col-md-3 d-none d-md-block">
+					<div class="foot_menu-title">Полезные статьи</div>
+					<ul class="foot_menu no-style">
+						<li><a href="" class="item">Льготные лекарства</a></li>
+						<li><a href="" class="item">Дешевые аналоги дорогих лекарств</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-12 text-center">
+					<p class="ask_title">Если у вас появились вопросы,<br> напишите или позвоните нам:</p>
+					<a href="" class="btn_ask">Задать вопрос</a>
+					<div class="phone">
+						<div class="pre_numb">Аптечная справочная служба</div>
+						8-800-100-000-3
+						<div class="descr_numb">бесплатный звонок по России</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer_sect apps d-none d-md-block">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-5 col-md-5">
+					<a href="" class="mobile_app"><i></i>Мобильное приложение</a>
+				</div>
+				<div class="col-lg-3 col-md-3 no-pl">
+					<a href="" class="telephone_number"><i></i>+7-914-555-55</a>
+				</div>
+				<div class="col-lg-3 col-md-3 offset-1 text-center">
+					<a href="" class="telegramm_app"><i></i>tvoyaapteka_bot</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer_sect d-none d-lg-block">
+		<div class="container">
+			<div class="row">
+				<div class="partners">
+					<p class="our_partners">Наши партнеры:</p>
+					<figure class="parnter"><img src="img/small_soc.png"></figure>
+					<figure class="parnter"><img src="img/small_apt.png"></figure>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer_sect copywright">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-12 tvoyaapteka"><a href="" class="apteke">© 2015 Аптечая справочная служба</a></div>
+				<div class="col-lg-6 col-md-6 col-sm-12 info_dev">Создание сайта <a href="" class="dev">Sp-Artgroup</a></div>
+			</div>
+		</div>
+	</div>
+</footer>
+</body>
+</html>
